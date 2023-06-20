@@ -12,7 +12,8 @@
     "@vueuse/core": "^10.2.0",
     "animate.css": "^4.1.1",
     "lodash": "^4.17.21",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-router": "^4.2.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
