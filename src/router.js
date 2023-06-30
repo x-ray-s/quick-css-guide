@@ -10,6 +10,10 @@ const router = createRouter({
       path: "/flex",
       redirect: "/",
     },
+    {
+      path: "/position",
+      component: () => import("./views/Position.vue"),
+    },
   ],
 });
 

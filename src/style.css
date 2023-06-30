@@ -90,3 +90,91 @@ button {
     background-color: #f9f9f9;
   }
 }
+
+.section {
+  @apply my-10;
+}
+
+.box {
+  @apply w-[240px] h-[200px] bg-slate-100 rounded p-2 flex-shrink-0;
+}
+
+.item {
+  @apply w-[50px] h-[50px] bg-cyan-500 rounded-sm flex items-center justify-center text-white;
+}
+
+.inline-code {
+  @apply bg-gray-500 text-white rounded px-2 py-1 text-sm align-middle;
+}
+
+.direction-arrow {
+  @apply text-slate-400;
+  height: 10px;
+  display: flex;
+}
+.direction-arrow > div {
+  --w: 12px;
+  --h: 6px;
+  content: "";
+  background: currentColor;
+  width: var(--w);
+  clip-path: polygon(
+    0 var(--h),
+    calc(100% - var(--w)) var(--h),
+    calc(100% - var(--w)) 0,
+    100% 50%,
+    calc(100% - var(--w)) 100%,
+    calc(100% - var(--w)) calc(100% - var(--h)),
+    0 calc(100% - var(--h))
+  );
+  fill: currentColor;
+}
+
+.direction-arrow-animate {
+  animation: 0.5s ease-in forwards grow;
+}
+
+@keyframes grow {
+  0% {
+    flex-grow: 0;
+  }
+  100% {
+    flex-grow: 1;
+  }
+}
+
+.properties-table,
+.rules-table {
+  @apply w-full text-left border-collapse;
+}
+
+.properties-table td,
+.rules-table td {
+  @apply py-2 border-b border-gray-200;
+}
+.properties-table td:first-of-type {
+  @apply text-indigo-600;
+}
+
+.rules-table td:first-of-type {
+  @apply text-gray-600;
+}
+
+.gaps {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+.gap-help-line {
+  @apply absolute top-0 h-full;
+  width: 10px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAEBJREFUKFNjZCAC/LH/85+RkDqQIpaDLIx4FcIUgQzDqRBZEU6F6IqwKsSmCEMhLkUoCvEpgiskpAiskBhFIIUA0j0nQfd7WiMAAAAASUVORK5CYII=);
+  background-repeat: repeat;
+}
+
+.gap-help-line-y {
+  transform-origin: 0 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  top: auto;
+}
