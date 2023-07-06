@@ -8,7 +8,7 @@ import { ref, computed, watch, onMounted } from "vue";
 import { useTitle } from "@vueuse/core";
 import _ from "lodash";
 
-const title = "Flex 布局建议指南";
+const title = "Flex 布局简易指南";
 
 useTitle(title);
 
